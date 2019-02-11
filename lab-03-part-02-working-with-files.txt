@@ -37,7 +37,7 @@ $ ls
 Copy and paste the output below.
 ----------
 
-
+foo.txt
 
 ==========
 7. Create another new file using touch.
@@ -53,6 +53,7 @@ $ touch bar.txt
 Copy and paste the output below.
 ----------
 
+bar.txt	foo.txt
 
 
 ==========
@@ -62,6 +63,8 @@ Copy and paste the output below.
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
 
+cp bar.txt baz.txt
+bar.txt	baz.txt	foo.txt
 
 
 ==========
@@ -69,6 +72,9 @@ Write the command that you used to copy the file.  Additionally, copy and paste 
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
+rm bar.txt
+
+baz.txt foo.txt
 ==========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
@@ -76,7 +82,8 @@ Write the command that you used to remove the file.  Copy and paste the output o
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
 
-
+mv foo.txt qux.txt
+baz.txt	qux.txt
 
 ==========
 12. Go up one directory so that you're in ~/mtec1002-lab-03.
@@ -90,16 +97,18 @@ Write the command that you used to move the file.  Copy and paste the output of 
 
 Write out the command that you used and what happened.
 ----------
+rmdir my_files
 
-
+rmdir: my_files/: Directory not empty
 
 ==========
 14. Try removing the directory called my_files using rm.
 
 Write out the command that you used and what happened.
 ----------
+rm my_files
 
-
+rm: my_files/: is a directory
 
 ==========
 15. MAKE SURE YOU'RE IN THE mtec1002-lab-03 directory!  
@@ -121,7 +130,7 @@ Use the command called cat on the file to show its contents.
 Describe what happened below.
 ----------
 
-
+This printed out the entire page file which seems to be a book
 
 ==========
 17. That was a lot of text.  Let's find ways to limit it.  Using the same file...
@@ -133,7 +142,9 @@ Use the command, head, on the file to show the contents of the beginning of the 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
 
+head pg1232.txt 
 
+Title: The Prince
 
 ==========
 18. Using the same file again!
@@ -145,6 +156,14 @@ Use tail on the file to show the contents of the end of the file.
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
 
+tail pg1232.txt
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+
+this was the last line not the title
 
 
 ==========
@@ -156,7 +175,11 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
+less pg1232.txt
+more pg1232.txt
 
+space on less gives small parts of the txt file and q quits the file and displays all of it
+space on more gives small bits as well but now with q it doesnt display the entire text file and show the command line
 
 
 ==========
@@ -164,15 +187,19 @@ Write the command that you used below.  Describe what spacebar and q does after 
 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
 ----------
-
+less is a great tool if you want to read the file then dispaly the entire file once done. more conserves space and you can read parts of the file and once done wont display the entire file. Cat is meant to just display the text. tail displays the last lines. head displays the first lines.
 
 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
 
+wc pg1232.txt
 
+305864
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
 ----------
+wc -l pg1232.txt
+5063
