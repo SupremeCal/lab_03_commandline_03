@@ -18,6 +18,8 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 What command did you use, and what was its output?
 ----------
 
+date 
+Mon Feb 11 16:27:48 EST 2019
 
 
 ==========
@@ -26,7 +28,15 @@ What command did you use, and what was its output?
 What command did you use, and what was its output?
 ----------
 
-
+cal
+  February 2019      
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28        
+                      
 
 ==========
 3. Go to your home directory.  Verify that you're in your home directory.
@@ -34,7 +44,7 @@ What command did you use, and what was its output?
 What commands did you use to do this?
 ----------
 
-
+pwd 
 
 ==========
 4. Create an empty file called copy_to_backup.sh.  Verify that the file exists.
@@ -42,6 +52,16 @@ What commands did you use to do this?
 What commands did you use to do this?
 ----------
 
+ls
+AMALogger20190109.log	Movies			google.html
+Adlm			Music			hello
+Adobe			New Unity Project	ipe.properties
+Applications		Pictures		isus
+Desktop			Public			mtec1002-lab-03
+Documents		QLData			mtec1002-lab-03.tar.gz
+Downloads		Things			pymel.log
+Library			copy_to_backup.sh	stuff
+MPLABXProjects		echo			xgen
 
 
 ==========
@@ -50,6 +70,7 @@ What commands did you use to do this?
 What command did you use to find the permissions?
 ----------
 
+ls -l 
 
 
 ==========
@@ -58,7 +79,7 @@ What command did you use to find the permissions?
 What commands did you use to do this?  What was the output?
 ----------
 
-
+chmod u+x copy_to_backup.sh
 
 ==========
 7. Try executing the file!
@@ -68,7 +89,7 @@ $ ./copy_to_backup.sh
 What command did you use to try to execute the file?  What happens?
 ----------
 
-
+-bash: ./copy_to_backup.sh: is a directory
 
 ==========
 8. Open the file with nano
@@ -76,7 +97,7 @@ What command did you use to try to execute the file?  What happens?
 What command did you use to do this?
 ----------
 
-
+nano copy_to_backup.sh
 
 ==========
 9. In your file, write the following commands:
